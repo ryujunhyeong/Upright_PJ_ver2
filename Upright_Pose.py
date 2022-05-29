@@ -49,6 +49,7 @@ def camStart():
     cap.set(cv.CAP_PROP_FRAME_WIDTH, 900)
     turtle_Count=0
     start = time.time()  # 시작 시간 저장
+    Upright_DB.Count_Habit2()
     while cap.isOpened():
 # turtle ----------------------------------------------------------------------------------
         ret, img = cap.read()

@@ -223,14 +223,13 @@ def insertBLOB(photo):
         print("Failed inserting BLOB data into MySQL table {}".format(error))
 
 # 통계 집어넣기
-def Count_Habit2(habit,time):
+def Count_Habit2():
     upRight_db = pymysql.connect(
         host="210.125.31.236", user="test2", password="s1234", db="upright", charset="utf8")
     cursor = upRight_db.cursor()
-    if(habit == "turtle"):
-        sql = """UPDATE upright.habit_count SET turtle = turtle+1, timeCnt=%s WHERE id = %s"""
+    sql = """UPDATE upright.habit_count SET turtle = 0, eye=0, timeCnt=0 WHERE id = %s"""
        # sql = "UPDATE `upright`.`habit_count` SET `turtle`=`turtle`+1, `timeCnt`=%d WHERE (`id` = %s);"
-    val = (time,User.user.id)
+    val = (User.user.id)
     cursor.execute(sql, val)
     upRight_db.commit()
 
