@@ -204,7 +204,7 @@ class MainWindow(base2, form2):
 
     def community(self):
         webbrowser.open(
-            url='http://ec2-18-188-52-122.us-east-2.compute.amazonaws.com/')
+            url='http://techjh.site/')
 
     def logout(self):
         exit()
